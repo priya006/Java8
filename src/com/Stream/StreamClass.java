@@ -3,6 +3,7 @@ package com.Stream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamClass {
@@ -26,7 +27,12 @@ public class StreamClass {
             if(person.getGender().equals(Gender.FEMALE))
                 System.out.println("Gender is female" + person);
         }
+
+        //Filter using stream API
+        List<Person> listOfFemalesUsingStream = MyPersonList.stream().filter(onepersonfromlist -> onepersonfromlist.getGender().equals(Gender.MALE)).collect(Collectors.toList());
+        System.out.println("Using Stream filter" + listOfFemalesUsingStream);
     }
+
 
 
 
