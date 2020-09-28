@@ -1,4 +1,4 @@
-package com.company;
+package com.lamda;
 
 import java.awt.*;
 import java.awt.event.*;

@@ -1,4 +1,4 @@
-package com.company;
+package com.lamda;
 
 @FunctionalInterface
 interface MyFunctionalInterface{

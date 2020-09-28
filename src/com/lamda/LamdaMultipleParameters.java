@@ -1,4 +1,4 @@
-package com.company;
+package com.lamda;
 
 interface sconcatinterface{
      String sconcat (String str1, String str2);
