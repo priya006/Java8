@@ -30,7 +30,7 @@ public class StreamClass {
 
         //Filter using stream API
         List<Person> listOfFemalesUsingStream = MyPersonList.stream().filter(onepersonfromlist -> onepersonfromlist.getGender().equals(Gender.MALE)).collect(Collectors.toList());
-        System.out.println("Using Stream filter" + listOfFemalesUsingStream);
+        listOfFemalesUsingStream.forEach(System.out::println);
     }
 
 
