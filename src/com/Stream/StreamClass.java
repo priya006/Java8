@@ -1,9 +1,6 @@
 package com.Stream;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -37,7 +34,28 @@ public class StreamClass {
         List<Person> sortedListUsingStream = MyPersonList.stream().sorted(Comparator.comparing(Person::getAge)).collect(Collectors.toList());
         System.out.println("******** sorted list using stream by age ********");
         sortedListUsingStream.forEach(System.out::println);
+        List<Person> reversedListUsingStream = MyPersonList.stream().sorted(Comparator.comparing(Person::getAge).reversed()).collect(Collectors.toList());
+        System.out.println("******** Reversed list using stream by age ********");
+        reversedListUsingStream.forEach(System.out::println);
+
+        boolean ageGreaterThan2 = MyPersonList.stream().allMatch(person -> person.getAge() > 2);
+        System.out.println("*****Age greater than 2***********");
+        System.out.println(ageGreaterThan2);
+
+        System.out.println("*****Minimum list***********");
+        MyPersonList.stream().min(Comparator.comparing(Person::getAge)).ifPresent(System.out::println);
+
+        //Group by Geneder and convert to a map
+        System.out.println("***** Group By Gender ***********");
+        Map<Gender, List<Person>> groupByGender = MyPersonList.stream().collect(Collectors.groupingBy(Person::getGender));
+        groupByGender.forEach((gender, people) -> {
+            System.out.println(gender);
+            people.forEach(System.out::println);
+        } );
+
+
     }
+
 
 
 
