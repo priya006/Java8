@@ -2,6 +2,7 @@ package com.Stream;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -31,7 +32,13 @@ public class StreamClass {
         //Filter using stream API
         List<Person> listOfFemalesUsingStream = MyPersonList.stream().filter(onepersonfromlist -> onepersonfromlist.getGender().equals(Gender.MALE)).collect(Collectors.toList());
         listOfFemalesUsingStream.forEach(System.out::println);
+
+        //Sorting the original list using stream API
+        List<Person> sortedListUsingStream = MyPersonList.stream().sorted(Comparator.comparing(Person::getAge)).collect(Collectors.toList());
+        System.out.println("******** sorted list using stream by age ********");
+        sortedListUsingStream.forEach(System.out::println);
     }
+
 
 
 
