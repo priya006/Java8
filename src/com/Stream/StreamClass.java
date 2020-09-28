@@ -20,6 +20,7 @@ public class StreamClass {
         MyPersonList.add(new Person(24,"Priya1",Gender.MALE));
         MyPersonList.add(new Person(27,"Priya12",Gender.MALE));
         MyPersonList.add(new Person(22,"Yazhinii",Gender.FEMALE));
+        MyPersonList.add(new Person(52,"Puppyma",Gender.FEMALE));
 
         for(Person person: MyPersonList){
             if(person.getGender().equals(Gender.FEMALE))
@@ -53,6 +54,10 @@ public class StreamClass {
             people.forEach(System.out::println);
         } );
 
+        //Show the oldest female from the list
+        System.out.println("*******oldest female from the list*********");
+        Optional<Person> maxAgeWomen = MyPersonList.stream().filter(person -> person.getGender().equals(Gender.FEMALE)).max(Comparator.comparing(Person::getAge));
+        maxAgeWomen.ifPresent(System.out::println);
 
     }
 
