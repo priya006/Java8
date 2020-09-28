@@ -16,14 +16,19 @@ public class StreamClass {
         //stream.forEach(System.out::println);
 
         //Adding persons in a list
-
-
-
-        //Person personObject = new Person(26 , "Sachin", Gender.MALE);
         ArrayList<Person> MyPersonList = new ArrayList<>();
         MyPersonList.add(new Person(22,"Priya",Gender.FEMALE));
         MyPersonList.add(new Person(24,"Priya1",Gender.MALE));
         MyPersonList.add(new Person(27,"Priya12",Gender.MALE));
+        MyPersonList.add(new Person(22,"Yazhinii",Gender.FEMALE));
 
+        for(Person person: MyPersonList){
+            if(person.getGender().equals(Gender.FEMALE))
+                System.out.println("Gender is female" + person);
+        }
     }
+
+
+
+
 }
