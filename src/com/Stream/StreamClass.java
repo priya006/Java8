@@ -59,6 +59,12 @@ public class StreamClass {
         Optional<Person> maxAgeWomen = MyPersonList.stream().filter(person -> person.getGender().equals(Gender.FEMALE)).max(Comparator.comparing(Person::getAge));
         maxAgeWomen.ifPresent(System.out::println);
 
+        List<String>strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
+        List<String> filtered = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
+
+        System.out.println("Filtered List: " + filtered);
+        String mergedString = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.joining(", "));
+        System.out.println("Merged String: " + mergedString);
     }
 
 
