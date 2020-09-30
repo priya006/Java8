@@ -1,12 +1,13 @@
-package com.ComparableInterface;
+package com.Comparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class DriverClassForLaptop {
+public class ComparatorDriverClass {
 
     public static void main(String[] args) {
+
 
         //I want to add laptop to a list
         List<Laptop> listOfLaptop = new ArrayList<>();
@@ -14,9 +15,10 @@ public class DriverClassForLaptop {
         listOfLaptop.add(new Laptop(800, "Apple", 1200));
         listOfLaptop.add(new Laptop(500, "local", 200));
 
-        for(Laptop laptop: listOfLaptop)
-            System.out.println(laptop);
-        //I like to sort the listOfLaptop based on price
-        Collections.sort(listOfLaptop);
+        Laptop comparatorExampleObject = new Laptop();
+        Collections.sort(listOfLaptop,comparatorExampleObject.comparatorObjectToSort);
+
+        for(Laptop sortedLaptop: listOfLaptop)
+            System.out.println("Sorted using comparator interface with my own logic: " +sortedLaptop);
     }
 }
