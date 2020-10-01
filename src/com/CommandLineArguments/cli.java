@@ -1,4 +1,4 @@
-package CommandLineArguments;
+package com.CommandLineArguments;
 
 //During javac compile java program -> Byte code -> Class file
 //During java javaprogram.java -> The actual class file gets executed
