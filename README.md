@@ -9,3 +9,4 @@ Concepts of Java 8
 4. Comparable Interface
 5. SingletonDesign Pattern 
 6. Enum is also a class
+7. Java String Format
