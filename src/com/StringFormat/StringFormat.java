@@ -36,5 +36,8 @@ public class StringFormat {
         //Left justified with -
         System.out.println(String.format("Left justified %-20d", 1234));
 
+        //Precision is `.5` it could be used for float numbers
+        System.out.println(String.format("Left justified %-20.5f", 1234343434.87867));
+
     }
 }
