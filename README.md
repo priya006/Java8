@@ -1,5 +1,4 @@
-# Java8
-Concepts of Java 8 
+# Java Concepts
 
 ## Topics
 
@@ -10,3 +9,4 @@ Concepts of Java 8
 5. SingletonDesign Pattern 
 6. Enum is also a class
 7. Java String Format
+8. Interface
