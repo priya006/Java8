@@ -13,7 +13,7 @@ public class InputWrongValue {
             System.out.println(inputNumber);
         }catch (Exception e)
         {
-            System.out.println("A exception is occured!");
+            System.out.println("Pls enter a number");
         }
 
     }
