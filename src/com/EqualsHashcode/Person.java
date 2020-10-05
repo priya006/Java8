@@ -1,5 +1,7 @@
 package com.EqualsHashcode;
 
+import java.util.Objects;
+
 public class Person {
     String firstName;
     String lastName;
@@ -33,5 +35,21 @@ public class Person {
 
     public void setSsn(int ssn) {
         this.ssn = ssn;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        //Cast the object
+        Person person = (Person) o;
+        return ssn == person.ssn &&
+                Objects.equals(firstName, person.firstName) &&
+                Objects.equals(lastName, person.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, ssn);
     }
 }
