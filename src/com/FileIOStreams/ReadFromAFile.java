@@ -2,6 +2,7 @@ package com.FileIOStreams;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+
 /*
 1. Loop through each line from the file and print it out
 2. readLine() reads line from a file. Terminates when it gets null
