@@ -2,6 +2,7 @@ package com.FileIOStreams;
 /*
 1. Read from a file A using Buffered Reader
 2. Read using readline() and the method stops while it sees null in the file
+3. Write a file using FileWriter
 
  */
 
