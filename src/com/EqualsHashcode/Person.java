@@ -37,6 +37,9 @@ public class Person {
         this.ssn = ssn;
     }
 
+    /*
+    If two Objects are equals then we need to override equals method
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
