@@ -13,5 +13,9 @@ public class EqualsHashcode {
 
         System.out.printf("person equals to person1? %s%n",  firstObject.equals(secondObject));
         System.out.printf("secondObject equals to ThirdObject? %s%n",  secondObject.equals(thirdobject));
+        System.out.printf("Hashcode of firstObject %d%n",firstObject.hashCode());
+        System.out.printf("Hashcode of secondObject %d%n",secondObject.hashCode());
+        System.out.printf("Hashcode of thirdobject %d ",thirdobject.hashCode());
+
     }
 }
