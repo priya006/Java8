@@ -12,4 +12,6 @@
 8. Interface
 9. Try/Catch [Exception Handling]
 10. File Input/Output Streams
+
+![Collections](https://github.com/priya006/Java8/blob/master/Collections.png)
  
