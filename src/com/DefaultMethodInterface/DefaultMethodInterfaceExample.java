@@ -6,7 +6,7 @@ interface TestInterface
     // abstract method
     public void square(int a);
 
-    // default method
+    // default method which has method implementation. There is no need for implemeting classes to give an implementaion for default methods
     default void show()
     {
         System.out.println("Default Method Executed");

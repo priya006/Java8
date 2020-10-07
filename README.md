@@ -14,6 +14,7 @@
 10. File Input/Output Streams
 11. Predicate [Functional Interface]
 12. forEachRemaining
+13. Default Method Interface
 
 ![Collections](https://github.com/priya006/Java8/blob/master/Collections.png)
  
