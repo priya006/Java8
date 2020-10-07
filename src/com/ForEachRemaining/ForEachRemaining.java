@@ -12,6 +12,10 @@ public class ForEachRemaining {
         stack.push("Priya123");
 
         Iterator<String> iterator = stack.iterator();
+
+        //We are avoiding the code  while (iterator.hasNext()) {
+        //            System.out.println(iterator.next());
+        //        }
         iterator.forEachRemaining(element -> {
             System.out.println(element);
         });
